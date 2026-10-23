@@ -6,7 +6,28 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Que1 {
+  /*
+Questiong List:
+      Que1: Find employees whose salary is greater than 70,000.
+      Que2: Create a list containing only employee names.
+      Que3: Print the names of employees in the IT department using forEach.
+      Que4: Count employees whose salary is greater than 60,000.
+      Que5 Find distinct salaries.
+      Que6: Sort employees by salary in descending order.
+      Que7: Calculate the average salary of all employees and print the result.
+      QUE8: Calculate the total salary of all employees
+      QUE9: Find the second-highest distinct salary
 
+ Question of Grouping
+      1. Group employees by department and return Map<String, List<Employee>>.
+      2. Count employees in each department.
+      3. Calculate the average salary for each department.
+      4. Find the highest-paid employee in each department.
+      5. Collect only employee names for each department
+      6. Find the department with the highest average salary.
+
+
+   */
 
     public static void main(String[] args) {
 
