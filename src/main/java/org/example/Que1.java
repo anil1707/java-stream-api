@@ -12,7 +12,7 @@ Questiong List:
       Que2: Create a list containing only employee names.
       Que3: Print the names of employees in the IT department using forEach.
       Que4: Count employees whose salary is greater than 60,000.
-      Que5 Find distinct salaries.
+      Que5: Find distinct salaries.
       Que6: Sort employees by salary in descending order.
       Que7: Calculate the average salary of all employees and print the result.
       QUE8: Calculate the total salary of all employees
@@ -181,6 +181,17 @@ Questiong List:
 //        });
 //
 //        System.out.println(result.get().getValue() + ": " + result.get().getKey());
+
+//        Problem 10 — Group employees by department and find the highest-paid employee in each department.
+        Map<String, Optional<Employee>> map = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.maxBy(Comparator.comparingDouble(emp -> emp.getSalary()))));
+
+
+        map.forEach((key, val) ->{
+            System.out.println("Dept: " + key);
+            System.out.println("  Emp: " + val.get().getName() + ", " + val.get().getSalary());
+
+        });
     }
 
 
