@@ -1,27 +1,38 @@
 package org.example;
 
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static boolean isPalindrome(String s) {
-        int l = 0;
-        int r = s.length()-1;
-        String result = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
-        System.out.println(result);
-        while(l<r){
-            if(s.charAt(l) != s.charAt(r)){
-                return false;
+
+    public static int lengthOfLongestSubstring(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int i=0;
+        int j=0;
+        if(s.isEmpty()) return 0;
+        int ans = 1;
+        while(i<s.length()){
+            if(map.containsKey(s.charAt(i))){
+                if(j <= map.get(s.charAt(i))){
+                    ans = Math.max(ans, (i - j));
+                    j = map.get(s.charAt(i))+1;
+                }
+                map.put(s.charAt(i), i);
+
+            } else {
+                map.put(s.charAt(i), i);
             }
-            l++;
-            r--;
+            i++;
         }
-        return true;
+
+        return Math.max(ans, i - j);
     }
+
     public static void main(String[] args) {
-        String s = "Was it a car or a cat I saw?";
-        boolean ans = isPalindrome(s);
-        System.out.println(ans);
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
     }
 }
