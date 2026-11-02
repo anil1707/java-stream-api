@@ -3,7 +3,7 @@ package org.example.intermediate;
 import java.util.Comparator;
 import java.util.List;
 
-public class Q007_SortByLength {
+public class Q006_SortByLength {
     /*
      * Problem:
      * Given a list of strings, sort them by their length in ascending order using Java Streams.

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Q008_GroupByFirstCharacter {
+public class Q007_GroupByFirstCharacter {
     /*
      * Problem:
      * Given a list of strings, group them by their first character using Java Streams.

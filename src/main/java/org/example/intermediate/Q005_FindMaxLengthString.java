@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Stack;
 
-public class Q006_FindMaxLengthString {
+public class Q005_FindMaxLengthString {
     /*
      * Problem:
      * Given a list of strings, find the string with maximum length using Java Streams.
